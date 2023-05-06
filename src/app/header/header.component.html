@@ -1,10 +1,19 @@
-<div class="header" (scroll)="stick()" [ngClass]="isSticky?'fixed':'nofixed'">
-    <h1>Portfolio</h1>
-    <div class="nav-links">
-        <a href="">Home</a>
-        <a href="">Skills</a>
-        <a href="">About me</a>
-        <a href="">Projects</a>
-        <a href="">Contact</a>
+<div class="header" [ngClass]="isSticky ? 'fixed' : 'nofixed'">
+  <h1>Portfolio</h1>
+  <div class="nav-links">
+    <a href="">Home</a>
+    <a href="">Skills</a>
+    <a href="">Projects</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/tornike-eloshvili-40b729252/">
+        <img src="../../assets/linkedin.png" alt="linkedin" />
+      </a>
+      <a href="https://github.com/WebMan2006">
+        <img src="../../assets/github.png" alt="github" />
+      </a>
     </div>
+    <div class="burger" (click)="toggleMenu()">
+      <span></span>
+    </div>
+  </div>
 </div>

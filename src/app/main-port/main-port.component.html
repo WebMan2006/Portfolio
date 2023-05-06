@@ -44,10 +44,81 @@
             <div class="left-side">
                 <h1>Hello</h1>
                 <h1>my name is Tornike</h1>
-                <h1>I'm a </h1>
-            </div>
+                  <h1 class="typing-anim">I'm a <ngx-typed-js 
+                  [strings]="['Frontend Angular Developer']"
+                  [loop]="true"
+                  [typeSpeed]="100"
+                  cursorColor="rgba(160, 120, 255, 0.6)">
+                  <span class="typing"></span>
+                  </ngx-typed-js>
+                </h1>
+                <div class="button" data-tooltip="Size: 20Mb">
+                  <div class="button-wrapper">
+                    <div class="text">Resume</div>
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                      </span>
+                    </div>
+                  </div>
+              </div>
             <div class="right-side">
-
+              <div class="box"></div>
             </div>
+        </div>
+        <div class="skills">
+          <h1>Skills</h1>
+          <div class="list">
+            <div class="frontend">
+              <h1>FrontEnd Developer</h1>
+              <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Bootstap</li>
+                <li>Scss</li>
+                <li>Sass</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Git</li>
+                <li>Figma</li>
+                <li>Github</li>
+                <li>Responsive</li>
+                <li>Json</li>
+                <li>Angular</li>
+                <li>Java</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="projects">
+          <h1>Projects</h1>
+          <div class="slider">
+            <a>
+            <div class="card">
+             <div class="card__content">
+              <img src="../../assets/NetClub.PNG" alt="food-website">
+                  <h3>NetClub</h3>
+                  <h4>Soon, full functional website</h4>
+              </div>
+            </div>
+            </a>
+            <a href="https://webman2006.github.io/food-website/figma%20design%202/index.html">
+              <div class="card">
+                <div class="card__content">
+                    <img src="../../assets/food-website.PNG" alt="food-website">
+                    <h3>Clone FoodWagon</h3>
+                    <h4>Without Responsive just markup</h4>
+                  </div>
+                </div>
+            </a>
+            <a href="https://webman2006.github.io/mini-portfolio/index-home.html">
+              <div class="card">
+                <div class="card__content">
+                    <img src="../../assets/mini-portfolio.PNG" alt="food-website">
+                    <h3>Mini Portfolio</h3>
+                    <h4>Small functionals, Responsive</h4>
+                  </div>
+                </div>
+            </a>
+          </div>
         </div>
 </div>

@@ -9,6 +9,8 @@
     background-color: transparent;
     backdrop-filter: blur(10px);
     padding: 0px 40px;
+    z-index: 4;
+    gap: 50px;
     h1{
         font-family: var(--main-font);
         color: #fff;
@@ -19,11 +21,81 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        & div:last-child{
+            display: none;
+        }
         a{
             text-decoration: none;
             font-family: var(--main-font);
             font-size: 20px;
             color: #fff;
+            
+        }
+        .burger{
+            width: 32px;
+            height: 24px;
+            position: absolute;
+            cursor: pointer;
+            right: 2rem;
+            top: 2rem;
+            z-index: 20;
+            
+            & span {
+                width: 100%;
+                height: 4px;
+                background-color: #fff;
+                border-radius: 12px;
+                display: block;
+                transition: background-color 0.5s ease-in-out;
+            }
+            
+            & span::before,
+            & span::after {
+                content: "";
+                width: 100%;
+                background-color: #fff;
+                display: block;
+                transition: all 0.5s ease-in-out;
+                border-radius: 12px;
+                height: 4px;
+            }
+            
+            & span::before {
+                transform: translateY(-10px);
+            
+            }
+            
+            & span::after {
+                transform: translateY(10px);
+                margin-top: -4px;
+            }
+            
+            
+            &.active span {
+                background-color: transparent;
+            }
+            
+            &.active span::before {
+                transform: rotateZ(45deg) translateY(0);
+            }
+            
+            &.active span::after {
+                transform: rotateZ(-45deg) translateY(0);
+            }
+        }
+    }
+    @media screen and (max-width: 780px) {
+        a{
+            display: none;
+        }
+        .links{
+            display: none;
+        }
+        .nav-links{
+            justify-content: end;
+        }
+        & .nav-links .burger{
+            display: flex;
         }
     }
 }

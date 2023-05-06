@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { MainPortComponent } from './main-port/main-port.component';
 import { LoaderComponent } from './loader/loader.component';
 import { HeaderComponent } from './header/header.component';
-import { SupportComponent } from './support/support.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 
 @NgModule({
@@ -16,11 +16,11 @@ import { FooterComponent } from './footer/footer.component';
     LoaderComponent,
     FooterComponent,
     HeaderComponent,
-    SupportComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
