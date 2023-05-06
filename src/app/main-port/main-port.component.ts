@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 
-
 @Component({
   selector: 'app-main-port',
   templateUrl: './main-port.component.html',

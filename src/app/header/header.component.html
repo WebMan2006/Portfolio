@@ -1,9 +1,9 @@
 <div class="header" [ngClass]="isSticky ? 'fixed' : 'nofixed'">
   <h1>Portfolio</h1>
   <div class="nav-links">
-    <a href="">Home</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
+    <a href="#">Home</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
     <div class="links">
       <a href="https://www.linkedin.com/in/tornike-eloshvili-40b729252/">
         <img src="../../assets/linkedin.png" alt="linkedin" />
@@ -12,8 +12,6 @@
         <img src="../../assets/github.png" alt="github" />
       </a>
     </div>
-    <div class="burger" (click)="toggleMenu()">
-      <span></span>
-    </div>
   </div>
+  <button class="menu-toggle" (click)="onClick()">Menu</button>
 </div>

@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, HostListener, Injectable} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,25 +6,21 @@ import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @ViewChild('burger') burger!: ElementRef;
-  @ViewChild('links') links!: ElementRef;
   isSticky: boolean = false;
-  activeMenu: boolean = false;
-
+  burgermenu: HTMLElement | null = null;
+  header: HTMLElement | null = null;
+  link2: HTMLElement | null = null;
+  
   ngOnInit(): void {
-    if (this.links.nativeElement.style.display === 'none') {
-      this.activeMenu = true;
-    }
-
-    if (this.activeMenu) {
-      this.burger.nativeElement.style.display = "block";
-    }
-
-    this.stick();
+    this.burgermenu = document.querySelector(".menu-toggle");
+    this.header = document.querySelector(".header");
+    this.link2 = document.querySelector(".nav-links")
+    this.stick()
   }
-
-  toggleMenu(): void {
-    this.burger.nativeElement.classList.toggle('active');
+  onClick(){
+    this.burgermenu?.classList.toggle("is-active")
+    this.header?.classList.toggle("activeheader")
+    this.link2?.classList.toggle("flex");
   }
 
   @HostListener('window:scroll', ['$event'])

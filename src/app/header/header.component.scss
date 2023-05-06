@@ -8,12 +8,73 @@
     justify-content: space-between;    
     background-color: transparent;
     backdrop-filter: blur(10px);
-    padding: 0px 40px;
+    padding: 0px 20px;
     z-index: 4;
-    gap: 50px;
+    gap: 100px;
     h1{
         font-family: var(--main-font);
         color: #fff;
+    }
+    $buttonWidth: 30px;
+    $buttonHeight: 26px;
+    $buttonColor: darken(#fff, 15%);
+    $lineThickness: 4px;
+    $transitionSpeed: .25s;
+    $transitionEasing: ease-in-out;
+    
+    .menu-toggle {
+        position: relative;
+        display: none;
+        width: $buttonWidth;
+        height: $buttonHeight;
+    
+        background: transparent;
+        border-top: $lineThickness solid;
+        border-bottom: $lineThickness solid;
+    
+        color: $buttonColor;
+        font-size: 0;
+    
+        transition: all $transitionSpeed $transitionEasing;
+    
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: $lineThickness;
+    
+            position: absolute;
+            top: 50%;
+            left: 50%;
+    
+            background: currentColor;
+    
+            transform: translate(-50%, -50%);
+            transition: transform $transitionSpeed $transitionEasing;
+        }
+    }
+    
+    button:hover {
+        color: lighten($buttonColor, 15%);
+    }
+    
+    button.is-active {
+        border-color: transparent;
+    
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    
+    button {
+        border: none;
+        cursor: pointer;
+        outline: none;
     }
     .nav-links{
         width: 600px;
@@ -21,9 +82,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        & div:last-child{
-            display: none;
-        }
         a{
             text-decoration: none;
             font-family: var(--main-font);
@@ -31,72 +89,21 @@
             color: #fff;
             
         }
-        .burger{
-            width: 32px;
-            height: 24px;
-            position: absolute;
-            cursor: pointer;
-            right: 2rem;
-            top: 2rem;
-            z-index: 20;
-            
-            & span {
-                width: 100%;
-                height: 4px;
-                background-color: #fff;
-                border-radius: 12px;
-                display: block;
-                transition: background-color 0.5s ease-in-out;
-            }
-            
-            & span::before,
-            & span::after {
-                content: "";
-                width: 100%;
-                background-color: #fff;
-                display: block;
-                transition: all 0.5s ease-in-out;
-                border-radius: 12px;
-                height: 4px;
-            }
-            
-            & span::before {
-                transform: translateY(-10px);
-            
-            }
-            
-            & span::after {
-                transform: translateY(10px);
-                margin-top: -4px;
-            }
-            
-            
-            &.active span {
-                background-color: transparent;
-            }
-            
-            &.active span::before {
-                transform: rotateZ(45deg) translateY(0);
-            }
-            
-            &.active span::after {
-                transform: rotateZ(-45deg) translateY(0);
-            }
-        }
+        
     }
     @media screen and (max-width: 780px) {
-        a{
-            display: none;
-        }
-        .links{
-            display: none;
-        }
         .nav-links{
-            justify-content: end;
+            display: none;
+            margin: 0px auto;
         }
-        & .nav-links .burger{
+        .flex{
             display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
+      .menu-toggle{
+          display: block;
+      }
     }
 }
 .fixed{
@@ -109,4 +116,14 @@
     position: absolute;
     top: 0;
     transition: top 0.5s ease-in-out;
+}
+
+
+.activeheader{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+    transition: 1s;
 }
