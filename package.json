@@ -21,6 +21,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "es-module-shims": "^1.7.2",
+    "g": "^2.0.1",
     "ngx-typed-js": "^2.1.1",
     "rxjs": "~7.8.0",
     "t-writer.js": "^1.0.4",
