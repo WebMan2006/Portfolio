@@ -22,7 +22,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
     AppRoutingModule,
     NgxTypedJsModule
   ],
-  providers: [],
+  providers: [MainPortComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
