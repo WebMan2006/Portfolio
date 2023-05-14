@@ -77,26 +77,35 @@
         outline: none;
     }
     .nav-links{
-        width: 600px;
+        max-width: 600px;
+        gap: 90px;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         a{
             text-decoration: none;
             font-family: var(--main-font);
             font-size: 20px;
             color: #fff;
-            
+            cursor: pointer;
         }
         
     }
     @media screen and (max-width: 780px) {
+        h1{
+            font-size: 1.2em;
+        }
         .nav-links{
             display: none;
             margin: 0px auto;
+            gap: 0;
         }
         .flex{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -105,6 +114,7 @@
           display: block;
       }
     }
+    
 }
 .fixed{
     position: fixed;
