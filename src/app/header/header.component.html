@@ -1,15 +1,15 @@
-<div class="header" [ngClass]="isSticky ? 'fixed' : 'nofixed'">
-  <h1>Portfolio</h1>
+<div class="header" [ngClass]="isSticky ? 'fixed' : 'nofixed'" data-aos="fade-down">
+  <h1 (click)="scrollToSection('home')">Portfolio</h1>
   <div class="nav-links">
     <a (click)="scrollToSection('home')">Home</a>
     <a (click)="scrollToSection('skills')">Skills</a>
     <a (click)="scrollToSection('projects')">Projects</a>
     <div class="links">
       <a href="https://www.linkedin.com/in/tornike-eloshvili-40b729252/">
-        <img src="../../assets/linkedin.png" alt="linkedin" />
+        <img src="assets/linkedin.png" alt="linkedin" />
       </a>
       <a href="https://github.com/WebMan2006">
-        <img src="../../assets/github.png" alt="github" />
+        <img src="assets/github.png" alt="github" />
       </a>
     </div>
   </div>

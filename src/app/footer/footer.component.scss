@@ -41,6 +41,7 @@
     }
     @media screen and (max-width: 800px) {
         h1{
+
             font-size: 1.6rem;
         }
         p{
@@ -56,6 +57,10 @@
         }
         p{
             font-size: 0.7rem;
+            font-size: 1em;
+        }
+        p{
+            font-size: 0.7em;
         }
     }
 }

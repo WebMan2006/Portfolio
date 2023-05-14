@@ -255,14 +255,24 @@
         &{
           flex-direction: column-reverse;
         }
+        .container{
+          max-width: 500px;
+        }
         .left-side{
+          max-width: 500px;
           height: 500px;
+          font-size: 0.8em;
           .button{
             margin: 50px auto;
           }
         }
         .right-side{
+          max-width: 500px;
           height: 350px;
+          .box{
+            max-width: 300px;
+            height: 300px;
+          }
         }
       }
       @media screen and (max-width: 600px) {
