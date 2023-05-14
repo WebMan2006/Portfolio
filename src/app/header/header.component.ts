@@ -36,11 +36,4 @@ export class HeaderComponent {
   stick(): void {
     this.isSticky = window.scrollY > 70;
   }
-
-  scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }
